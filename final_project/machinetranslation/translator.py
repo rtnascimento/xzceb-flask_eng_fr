@@ -20,6 +20,9 @@ language_translator.set_service_url(url)
 language_translator.set_disable_ssl_verification(True)
 
 def englishToFrench(englishText):
+
+    if englishText == None:
+        return None
     
     translation = language_translator.translate(
         text=englishText,
@@ -30,6 +33,9 @@ def englishToFrench(englishText):
     return frenchText
 
 def frenchToEnglish(frenchText):
+
+    if frenchText == None:
+        return None
     
     translation = language_translator.translate(
         text=frenchText,
