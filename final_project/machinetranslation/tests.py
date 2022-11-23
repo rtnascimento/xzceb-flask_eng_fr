@@ -7,6 +7,7 @@ class TestEnglishToFrench(unittest.TestCase):
         self.assertIsNone(english_to_french(None))
     def test_translation(self): 
         self.assertEqual(english_to_french('Hello'),'Bonjour')
+        self.assertNotEqual(english_to_french('Hello'),'Hello')
         
 
 class TestFrenchToEnglish(unittest.TestCase): 
@@ -14,6 +15,6 @@ class TestFrenchToEnglish(unittest.TestCase):
         self.assertIsNone(french_to_english(None))
     def test_translation(self): 
         self.assertEqual(french_to_english('Bonjour'),'Hello')
-        
+        self.assertNotEqual(french_to_english('Bonjour'),'Bonjour')
         
 unittest.main()
